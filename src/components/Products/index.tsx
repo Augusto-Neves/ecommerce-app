@@ -5,19 +5,16 @@ import toast, { Toaster } from "react-hot-toast";
 
 import "./styles.css";
 
-
 export const Products = () => {
   const allProducts = useSelector((state: State) => state.products);
   const dispatch = useDispatch();
-  
 
   const handleAddToCart = (product: any) => {
     dispatch({
       type: ActionTypes.CART_ADD_ITEM,
       payload: product,
-    }); 
+    });
     toast.success("Item added to cart");
-      
   };
   return (
     <div className="products-container">
@@ -32,8 +29,8 @@ export const Products = () => {
             <button onClick={() => handleAddToCart(item)}>Add to Cart</button>
           </div>
         );
-      })}      
-      <Toaster /> 
+      })}
+      <Toaster />
     </div>
   );
 };

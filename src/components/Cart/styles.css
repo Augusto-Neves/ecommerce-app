@@ -1,0 +1,10 @@
+.cart-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 150px 0;  
+}
+
+footer{
+    text-align: center;
+}

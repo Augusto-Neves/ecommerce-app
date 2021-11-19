@@ -10,7 +10,10 @@ interface AddItemAction {
 
 interface RemoveItemAction {
   type: "CART_REMOVE_ITEM";
-  payload: number;
+  payload: {
+    id: number;    
+    price: number;
+  };
 }
 
 export type Action = AddItemAction | RemoveItemAction;
